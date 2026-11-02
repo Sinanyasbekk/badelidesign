@@ -38,4 +38,10 @@ Domain satın almak tek başına dosya barındırma alanı sağlamaz; statik dos
 
 GitHub Actions her gönderimde test ve derlemeyi çalıştırır; `hostinger-public-html` adlı indirilebilir yayın dosyası üretir. Yerel `release/hostinger-public-html.zip` de yalnızca derlenmiş dosyaları içerir. Kaynak kodunu veya `node_modules` klasörünü hosting alanına yüklemeyin.
 
-Hosting ve DNS değişiklikleri bu aşamada yapılmadı. Otomatik FTP dağıtımı veya gizli anahtar gerekli değildir.
+## GitHub üzerinden otomatik yayın
+
+`main` React kaynak kodunu; `codex/hostinger` ise yalnızca derlenmiş site dosyalarını içerir. `main` üzerindeki her gönderimde GitHub Actions testleri ve derlemeyi çalıştırır. Başarılı derleme yayın dalına aktarılır. Başarısız test veya derleme yayın dalını değiştirmez. Pull request çalışmaları yayın yapmaz.
+
+Hostinger → ilgili web sitesi → Advanced → Git bölümünden bu depoyu bağlayın. **Branch: `codex/hostinger`**, **hedef: `public_html`** seçin. `main` dalını doğrudan yayınlamayın; bu hosting akışı React kaynaklarını derlemez. İlk Deploy işleminden sonra Auto-deployment açık olmalıdır. Hostinger bağlantısı, ilk yayın ve otomatik güncelleme ayrıca panelden doğrulanmalıdır.
+
+Workflow yalnızca yayın işine `contents: write` verir; GitHub'ın geçici `GITHUB_TOKEN` kimliğini kullanır. FTP parolası veya kişisel erişim anahtarı eklemek gerekmez. Yayın dalında elle değişiklik yapmayın; sonraki derleme bu dalın içeriğini günceller. Hosting üzerindeki değişiklikleri de kaynak projeye işleyin.

@@ -1,5 +1,15 @@
-name: React build
-on: [push, pull_request]
+name: Build and publish for Hostinger
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: hostinger-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,3 +26,36 @@ jobs:
         with:
           name: hostinger-public-html
           path: dist/
+  publish:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: hostinger-public-html
+          path: dist
+      - name: Update the branch connected to Hostinger
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f dist/index.html
+          git_auth="$(git config --get http.https://github.com/.extraheader)"
+          publish_dir="$RUNNER_TEMP/hostinger-site"
+          git -c http.https://github.com/.extraheader="$git_auth" clone \
+            --single-branch --branch codex/hostinger \
+            "https://github.com/${GITHUB_REPOSITORY}.git" "$publish_dir"
+          rsync -a --delete --exclude='.git/' dist/ "$publish_dir/"
+          git -C "$publish_dir" config user.name 'github-actions[bot]'
+          git -C "$publish_dir" config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C "$publish_dir" add -A
+          if git -C "$publish_dir" diff --cached --quiet; then
+            echo 'Published files are already up to date.'
+            exit 0
+          fi
+          git -C "$publish_dir" commit -m "Publish site from ${GITHUB_SHA}"
+          git -C "$publish_dir" -c http.https://github.com/.extraheader="$git_auth" \
+            push origin HEAD:codex/hostinger
