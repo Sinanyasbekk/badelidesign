@@ -5,6 +5,11 @@ export const categories = ['Tümü', 'Çok Satanlar', 'Tepsiler', 'Sehpalar', 'S
 // Şimdilik temsili seçki. İşletmenin onayladığı çok satan ürün kimlikleriyle güncelleyin.
 export const bestSellerIds = ['zeytin-tepsi', 'bahar-sehpa', 'limon-sunumluk', 'mavi-caydanlik'];
 export const products = [
+  { id: 'pembe-hibiskus-oval-tepsi', name: 'Pembe Hibiskuslu Oval Tepsi', category: 'Tepsiler', subtitle: 'Pembe hibiskus ve altın tonlu kenar süslemeleri', image: '/images/pembe-hibiskus-oval-tepsi.png', imageFit: 'contain', description: 'Beyaz zemin üzerindeki pembe hibiskus, pastel pembe bordür ve altın tonlu süslemelerle tamamlanır. Oval formdaki bu tasarımın ölçü ve uygulama detayları için bizimle iletişime geçebilirsiniz.', demo: false },
+  { id: 'kirmizi-hibiskus-oval-tepsi', name: 'Kırmızı Hibiskuslu Porselen Oval Tepsi', category: 'Tepsiler', subtitle: 'Kırmızı hibiskus, beyaz zemin ve altın tonlu detaylar', image: '/images/kirmizi-hibiskus-oval-tepsi.png', imageFit: 'contain', description: 'Beyaz porselen zemin üzerindeki kırmızı hibiskus, kırmızı bordür ve altın tonlu kabartmalı kenarlarla bir araya gelir. Ölçü ve kişiselleştirme seçenekleri için Instagram üzerinden bize ulaşabilirsiniz.', demo: false },
+  { id: 'cay-tabakli-mavi-cicekli-oval-tepsi', name: 'Çay Tabaklı Mavi Çiçekli Oval Tepsi', category: 'Tepsiler', subtitle: 'Uyumlu çay tabağıyla tamamlanan mavi çiçekli tasarım', image: '/images/cay-tabakli-mavi-cicekli-oval-tepsi.png', imageFit: 'contain', description: 'Mavi çiçekli, altın tonlu işlemeli oval tepsi; aynı desen ve renklerdeki çay tabağıyla birlikte bir takım oluşturur. Beyaz zemin, açık mavi bordür ve altın tonlu kenarlar hem tepside hem çay tabağında devam eder.', demo: false },
+  { id: 'sari-hibiskus-oval-tepsi', name: 'Sarı Hibiskuslu Barok Oval Tepsi', category: 'Tepsiler', subtitle: 'Sarı hibiskus ve barok esintili altın tonlu çerçeve', image: '/images/sari-hibiskus-oval-tepsi.png', imageFit: 'contain', description: 'Sarı hibiskus motifi ve sarı bordür, beyaz zemin üzerinde canlı bir görünüm oluşturur. Altın tonlu kabartmalı kenar süslemeleri oval formu çevreler. Ürün detayları için bize yazabilirsiniz.', demo: false },
+  { id: 'lacivert-cicekli-oval-tepsi', name: 'Altın Çerçeveli Lacivert Çiçekli Oval Tepsi', category: 'Tepsiler', subtitle: 'Mavi çiçek, lacivert bordür ve altın tonlu çerçeve', image: '/images/lacivert-cicekli-oval-tepsi.png', imageFit: 'contain', description: 'Beyaz zemin üzerindeki mavi çiçek, koyu lacivert bordür ve altın tonlu kenar süslemeleriyle tamamlanır. Tek oval tepsi olarak sunulan bu tasarımın ölçü ve diğer detaylarını bizimle görüşebilirsiniz.', demo: false },
   { id: 'turuncu-cicekli-oval-tepsi', name: 'Turuncu Çiçekli Oval Tepsi', category: 'Tepsiler', subtitle: 'Altın tonlu kenarlar, turuncu çiçek deseni', image: '/images/turuncu-cicekli-oval-tepsi.png', imageFit: 'contain', description: 'Beyaz zemin üzerinde turuncu çiçek deseni ve altın tonlu süslemeli kenarlarıyla oval porselen tepsi. Ölçü ve tasarım detayları için Instagram üzerinden iletişime geçebilirsiniz.', demo: false },
   { id: 'zeytin-tepsi', name: 'Zeytin Dalı', category: 'Tepsiler', subtitle: 'Doğadan ilham alan bir dokunuş', image: '/images/tray.svg', description: 'Zeytin dallarıyla yorumlanan tepsi tasarımı. Desen ve renk fikrini konuşmak için Instagram üzerinden bize ulaşabilirsiniz.', demo: true },
   { id: 'bahar-sehpa', name: 'Bahar Bahçesi', category: 'Sehpalar', subtitle: 'Yaşam alanlarına çiçekli bir yorum', image: '/images/table.svg', description: 'Çiçek motifleriyle tasarlanmış dekoratif sehpa örneği. Kendi alanınıza uygun renk ve desenleri birlikte değerlendirebiliriz.', demo: true },
@@ -15,6 +20,11 @@ export const products = [
 ];
 // Temsili alt kategoriler; gerçek katalogla birlikte düzenlenebilir.
 export const productSubcategories = {
+  'pembe-hibiskus-oval-tepsi': 'Oval Tepsi',
+  'kirmizi-hibiskus-oval-tepsi': 'Oval Tepsi',
+  'cay-tabakli-mavi-cicekli-oval-tepsi': 'Oval Tepsi',
+  'sari-hibiskus-oval-tepsi': 'Oval Tepsi',
+  'lacivert-cicekli-oval-tepsi': 'Oval Tepsi',
   'turuncu-cicekli-oval-tepsi': 'Oval Tepsi',
   'zeytin-tepsi': 'Zeytin Desenli',
   'bahar-sehpa': 'Çiçek Desenli',
