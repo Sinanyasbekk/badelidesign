@@ -4,7 +4,10 @@ import { existsSync } from 'node:fs';
 import { categories, products, filterProducts, getSubcategories } from './products.js';
 test('Her ürün benzersiz kimlik, geçerli kategori ve yerel görsel içerir', () => {
   assert.equal(new Set(products.map(p => p.id)).size, products.length);
-  for (const product of products) { assert.ok(categories.includes(product.category)); assert.ok(existsSync(`public${product.image}`)); }
+  for (const product of products) {
+    assert.ok(categories.includes(product.category));
+    for (const image of [product.image, ...(product.images || [])]) assert.ok(existsSync(`public${image}`));
+  }
 });
 test('Alt kategoriler yalnızca ana kategorideki ürünleri sayar ve aramayla birleşir', () => {
   const groups = getSubcategories('Tepsiler');

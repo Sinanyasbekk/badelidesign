@@ -25,6 +25,8 @@ Alt kategoriler aynı dosyadaki `productSubcategories` eşlemesinde ürün kimli
 
 Ürün detayındaki malzeme, boyut, parça sayısı, renk ve uzun açıklamalar `src/productInformation.js` içinde ürün kimliğine göre düzenlenir. Bu sürümde tüm teknik bilgiler temsili olarak işaretlenmiştir. Gerçek ürün verileri işletme tarafından doğrulandıktan sonra güncellenmelidir.
 
+Ek ürün fotoğrafları `src/products.js` içindeki `images` dizisinde tutulur; ana `image` ilk görsel olarak kalır. İsteğe bağlı `imageCaptions` dizisi ana görsel dahil tüm fotoğrafların açıklamalarını sırasıyla içerir. HEIC dosyalarını web için JPEG'e dönüştürmek üzere `node scripts/convert-heic.mjs kaynak.HEIC public/images/hedef.jpg` komutunu kullanabilirsiniz. Bu araç yalnızca hazırlık sırasında çalışır; siteye HEIC veya dönüştürme kütüphanesi yüklenmez.
+
 **Bu sürümdeki ürün adları ve SVG çizimleri temsili tasarım örnekleridir. Instagram içeriği doğrulanamadığından gerçek işletme kataloğu olarak kabul edilmemelidir.** Canlı yayın öncesi işletmenin onayladığı fotoğraf ve ürün bilgileriyle değiştirin; temsili görsel etiketlerini ancak bundan sonra kaldırın. Gıda teması, malzeme, stok, fiyat veya dayanıklılık iddiası eklenmemiştir.
 
 Renkler ve duyarlı düzen `src/style.css` içinde tanımlıdır. Google Fonts erişilemezse yerel fontlara geçilir. Instagram bağlantısı `src/products.js` içindedir. Telefon veya adres doğrulanmadığı için eklenmemiştir. Analitik, çerez veya form verisi toplanmaz.
