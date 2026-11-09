@@ -12,7 +12,28 @@ export const products = [
   { id: 'kir-cicegi-tepsi', name: 'Kır Çiçeği', category: 'Tepsiler', subtitle: 'Yumuşak renkler, ince detaylar', image: '/images/flower-tray.svg', description: 'Kır çiçeklerinden ilham alan dekoratif tepsi örneği. Renk ve motif seçeneklerini konuşmak için bize yazın.', demo: true },
   { id: 'botanik-vazo', name: 'Botanik', category: 'Dekoratif Objeler', subtitle: 'Evinizin bir köşesinde doğanın izi', image: '/images/vase.svg', description: 'Bitkisel motiflerle yorumlanan dekoratif obje tasarımı. Güncel çalışmalarımızı Instagram hesabımızda keşfedebilirsiniz.', demo: true },
 ];
-export function filterProducts(category, query = '') {
+// Temsili alt kategoriler; gerçek katalogla birlikte düzenlenebilir.
+export const productSubcategories = {
+  'zeytin-tepsi': 'Zeytin Desenli',
+  'bahar-sehpa': 'Çiçek Desenli',
+  'limon-sunumluk': 'Limon Desenli',
+  'mavi-caydanlik': 'Mavi Botanik',
+  'kir-cicegi-tepsi': 'Çiçek Desenli',
+  'botanik-vazo': 'Botanik Desenli',
+};
+export function filterProducts(category, query = '', subcategory = '') {
   const term = query.trim().toLocaleLowerCase('tr-TR');
-  return products.filter(p => (category === 'Tümü' || (category === 'Çok Satanlar' ? bestSellerIds.includes(p.id) : p.category === category)) && `${p.name} ${p.category} ${p.subtitle}`.toLocaleLowerCase('tr-TR').includes(term));
+  return products.filter(p => (category === 'Tümü' || (category === 'Çok Satanlar' ? bestSellerIds.includes(p.id) : p.category === category)) && (!subcategory || productSubcategories[p.id] === subcategory) && `${p.name} ${p.category} ${p.subtitle} ${productSubcategories[p.id] || ''}`.toLocaleLowerCase('tr-TR').includes(term));
+}
+
+export function getSubcategories(category) {
+  const groups = new Map();
+  for (const product of filterProducts(category)) {
+    const name = productSubcategories[product.id];
+    if (!name) continue;
+    const group = groups.get(name) || { name, count: 0, image: product.image };
+    group.count += 1;
+    groups.set(name, group);
+  }
+  return [...groups.values()];
 }

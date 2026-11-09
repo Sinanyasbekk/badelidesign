@@ -21,6 +21,8 @@ npm run preview
 
 `src/products.js` içinde ürün adı, kategori, açıklama ve görsel yolu düzenlenir. Gerçek görselleri `public/images/` içine ekleyin. Örneğin `/images/zeytin-tepsi.webp`. Görsel açıklamaları ve temsili görsel etiketleri `src/main.jsx` içinde bulunur.
 
+Alt kategoriler aynı dosyadaki `productSubcategories` eşlemesinde ürün kimliğine göre tanımlanır. Örneğin `'zeytin-tepsi': 'Zeytin Desenli'`. Menüdeki resimler ve adetler bu eşlemeden otomatik türetilir. Ana kategori, alt kategori ve arama birlikte filtrelenir. Mevcut alt kategori adları temsili olarak hazırlanmıştır.
+
 **Bu sürümdeki ürün adları ve SVG çizimleri temsili tasarım örnekleridir. Instagram içeriği doğrulanamadığından gerçek işletme kataloğu olarak kabul edilmemelidir.** Canlı yayın öncesi işletmenin onayladığı fotoğraf ve ürün bilgileriyle değiştirin; temsili görsel etiketlerini ancak bundan sonra kaldırın. Gıda teması, malzeme, stok, fiyat veya dayanıklılık iddiası eklenmemiştir.
 
 Renkler ve duyarlı düzen `src/style.css` içinde tanımlıdır. Google Fonts erişilemezse yerel fontlara geçilir. Instagram bağlantısı `src/products.js` içindedir. Telefon veya adres doğrulanmadığı için eklenmemiştir. Analitik, çerez veya form verisi toplanmaz.
