@@ -48,7 +48,8 @@ jobs:
           git -c http.https://github.com/.extraheader="$git_auth" clone \
             --single-branch --branch codex/hostinger \
             "https://github.com/${GITHUB_REPOSITORY}.git" "$publish_dir"
-          rsync -a --delete --exclude='.git/' dist/ "$publish_dir/"
+          rsync -ac --delete --exclude='.git/' dist/ "$publish_dir/"
+          cmp dist/index.html "$publish_dir/index.html"
           git -C "$publish_dir" config user.name 'github-actions[bot]'
           git -C "$publish_dir" config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git -C "$publish_dir" add -A
