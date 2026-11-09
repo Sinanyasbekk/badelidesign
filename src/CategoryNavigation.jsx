@@ -67,10 +67,10 @@ export default function CategoryNavigation({ onBrowse, onProduct }) {
         </aside>
         <div className="subcategory-products"><div className="subcategory-heading"><h3>{subcategory || 'Tüm Tasarımlar'}</h3><span aria-live="polite">{items.length} tasarım</span></div>
         <div className="category-preview-grid">{items.map(product => <button key={product.id} className="category-preview-card" onClick={() => { lastTrigger.current?.focus(); setPreview(null); onProduct(product); }}>
-          <img src={product.image} alt="" loading="lazy" /><span>{product.name}</span><small>{product.category}</small>
+          <img src={product.image} alt="" loading="lazy" style={{ objectFit: product.imageFit || 'cover' }} /><span>{product.name}</span><small>{product.category}</small>
         </button>)}</div>
         </div></div>
-        <p className="category-preview-note">Görseller ve ürün adları temsili tasarım örnekleridir.</p>
+        <p className="category-preview-note">Temsili tasarımlar ve işletmenin paylaştığı ürün görselleri birlikte gösterilmektedir.</p>
       </div>
     </section>}
   </div>;

@@ -5,6 +5,7 @@ export const categories = ['Tümü', 'Çok Satanlar', 'Tepsiler', 'Sehpalar', 'S
 // Şimdilik temsili seçki. İşletmenin onayladığı çok satan ürün kimlikleriyle güncelleyin.
 export const bestSellerIds = ['zeytin-tepsi', 'bahar-sehpa', 'limon-sunumluk', 'mavi-caydanlik'];
 export const products = [
+  { id: 'turuncu-cicekli-oval-tepsi', name: 'Turuncu Çiçekli Oval Tepsi', category: 'Tepsiler', subtitle: 'Altın tonlu kenarlar, turuncu çiçek deseni', image: '/images/turuncu-cicekli-oval-tepsi.png', imageFit: 'contain', description: 'Beyaz zemin üzerinde turuncu çiçek deseni ve altın tonlu süslemeli kenarlarıyla oval porselen tepsi. Ölçü ve tasarım detayları için Instagram üzerinden iletişime geçebilirsiniz.', demo: false },
   { id: 'zeytin-tepsi', name: 'Zeytin Dalı', category: 'Tepsiler', subtitle: 'Doğadan ilham alan bir dokunuş', image: '/images/tray.svg', description: 'Zeytin dallarıyla yorumlanan tepsi tasarımı. Desen ve renk fikrini konuşmak için Instagram üzerinden bize ulaşabilirsiniz.', demo: true },
   { id: 'bahar-sehpa', name: 'Bahar Bahçesi', category: 'Sehpalar', subtitle: 'Yaşam alanlarına çiçekli bir yorum', image: '/images/table.svg', description: 'Çiçek motifleriyle tasarlanmış dekoratif sehpa örneği. Kendi alanınıza uygun renk ve desenleri birlikte değerlendirebiliriz.', demo: true },
   { id: 'limon-sunumluk', name: 'Limon Çiçeği', category: 'Sunumluklar', subtitle: 'Sofralara küçük bir Akdeniz esintisi', image: '/images/platter.svg', description: 'Limon ve yaprak desenlerinin buluştuğu sunumluk tasarımı. Kullanım ve bakım bilgileri için işletmeyle iletişime geçin.', demo: true },
@@ -14,6 +15,7 @@ export const products = [
 ];
 // Temsili alt kategoriler; gerçek katalogla birlikte düzenlenebilir.
 export const productSubcategories = {
+  'turuncu-cicekli-oval-tepsi': 'Oval Tepsi',
   'zeytin-tepsi': 'Zeytin Desenli',
   'bahar-sehpa': 'Çiçek Desenli',
   'limon-sunumluk': 'Limon Desenli',

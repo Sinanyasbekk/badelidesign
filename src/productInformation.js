@@ -1,6 +1,13 @@
 // Malzeme, ölçü ve bakım dahil tüm teknik bilgiler tasarım amaçlı örnektir.
 // İşletmenin doğruladığı bilgilerle ürün kimliği üzerinden güncelleyin.
 export const productInformation = {
+  'turuncu-cicekli-oval-tepsi': {
+    demo: false, pattern: 'Turuncu Çiçek', material: 'Porselen', size: 'Bilgi için iletişime geçin', pieces: '1 parça', color: 'Turuncu / beyaz / altın tonları',
+    title: 'Turuncu Çiçekli Altın Kenarlı Porselen Tepsi',
+    story: 'Oval formun merkezindeki büyük turuncu çiçek, beyaz zemin üzerinde öne çıkar. Turuncu bordür ve altın tonlu kabartmalı kenar süslemeleri tasarımı tamamlar.',
+    detail: 'Ürün görseli işletme tarafından paylaşılmıştır. Ölçü, kişiselleştirme seçenekleri ve diğer ürün detaylarını Instagram üzerinden bizimle görüşebilirsiniz.',
+    care: 'Ürüne uygun temizlik ve bakım bilgilerini Instagram üzerinden öğrenebilirsiniz.',
+  },
   'zeytin-tepsi': {
     material: 'Ahşap', size: '40 × 30 cm', pieces: '1 parça', color: 'Krem / zeytin yeşili',
     title: 'Zeytin Dalı Dekoratif Tepsi',
