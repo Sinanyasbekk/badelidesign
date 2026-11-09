@@ -1,7 +1,9 @@
 // Tasarım örnekleri: gerçek ürünler ve fotoğraflar işletme onayıyla değiştirilmeli.
 // Fotoğrafları public/images/ klasörüne ekleyip image alanını güncelleyin.
 export const instagramUrl = 'https://www.instagram.com/badelidesign/';
-export const categories = ['Tümü', 'Tepsiler', 'Sehpalar', 'Sunumluklar', 'Çaydanlıklar', 'Dekoratif Objeler'];
+export const categories = ['Tümü', 'Çok Satanlar', 'Tepsiler', 'Sehpalar', 'Sunumluklar', 'Çaydanlıklar', 'Dekoratif Objeler'];
+// Şimdilik temsili seçki. İşletmenin onayladığı çok satan ürün kimlikleriyle güncelleyin.
+export const bestSellerIds = ['zeytin-tepsi', 'bahar-sehpa', 'limon-sunumluk', 'mavi-caydanlik'];
 export const products = [
   { id: 'zeytin-tepsi', name: 'Zeytin Dalı', category: 'Tepsiler', subtitle: 'Doğadan ilham alan bir dokunuş', image: '/images/tray.svg', description: 'Zeytin dallarıyla yorumlanan tepsi tasarımı. Desen ve renk fikrini konuşmak için Instagram üzerinden bize ulaşabilirsiniz.', demo: true },
   { id: 'bahar-sehpa', name: 'Bahar Bahçesi', category: 'Sehpalar', subtitle: 'Yaşam alanlarına çiçekli bir yorum', image: '/images/table.svg', description: 'Çiçek motifleriyle tasarlanmış dekoratif sehpa örneği. Kendi alanınıza uygun renk ve desenleri birlikte değerlendirebiliriz.', demo: true },
@@ -12,5 +14,5 @@ export const products = [
 ];
 export function filterProducts(category, query = '') {
   const term = query.trim().toLocaleLowerCase('tr-TR');
-  return products.filter(p => (category === 'Tümü' || p.category === category) && `${p.name} ${p.category} ${p.subtitle}`.toLocaleLowerCase('tr-TR').includes(term));
+  return products.filter(p => (category === 'Tümü' || (category === 'Çok Satanlar' ? bestSellerIds.includes(p.id) : p.category === category)) && `${p.name} ${p.category} ${p.subtitle}`.toLocaleLowerCase('tr-TR').includes(term));
 }
