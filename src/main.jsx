@@ -8,6 +8,7 @@ import InstagramButton from './InstagramButton.jsx';
 import BestSellers from './BestSellers.jsx';
 import HeaderSearch from './HeaderSearch.jsx';
 import CollectionSubcategories from './CollectionSubcategories.jsx';
+import ProductInformation from './ProductInformation.jsx';
 
 function Arrow({ diagonal = false }) { return <span aria-hidden="true">{diagonal ? '↗' : '↗'}</span>; }
 function InstagramLink({ children, className = '' }) { return <a className={className} href={instagramUrl} target="_blank" rel="noopener noreferrer">{children}</a>; }
@@ -23,7 +24,7 @@ function ProductDialog({ product, onClose }) {
     return () => { dialog.close(); document.body.style.overflow = before; previous?.focus(); };
   }, [product]);
   return <dialog ref={ref} className="product-dialog" onClose={onClose} onClick={e => { if (e.target === e.currentTarget) onClose(); }} aria-labelledby="dialog-title">
-    {product && <div className="dialog-inner"><button className="close" aria-label="Ürün detayını kapat" onClick={onClose}>×</button><img src={product.image} alt={`${product.name} — temsili ürün çizimi`} /><div className="dialog-copy"><span className="eyebrow">{product.category}</span><h2 id="dialog-title">{product.name}</h2><p>{product.description}</p><p className="demo-note">Tasarım örneğidir. Görsel ve ürün adı temsili olarak hazırlanmıştır; gerçek ürün, stok veya satış bilgisi içermez.</p><InstagramLink className="button dark">Instagram’dan bilgi alın <Arrow /></InstagramLink></div></div>}
+    {product && <div className="dialog-inner"><button className="close" aria-label="Ürün detayını kapat" onClick={onClose}>×</button><img src={product.image} alt={`${product.name} — temsili ürün çizimi`} /><div className="dialog-copy"><span className="eyebrow">{product.category}</span><h2 id="dialog-title">{product.name}</h2><p>{product.description}</p><ProductInformation product={product} /><p className="demo-note">Tasarım örneğidir. Görsel ve ürün adı temsili olarak hazırlanmıştır; gerçek ürün, stok veya satış bilgisi içermez.</p><InstagramLink className="button dark">Instagram’dan bilgi alın <Arrow /></InstagramLink></div></div>}
   </dialog>;
 }
 function App() {

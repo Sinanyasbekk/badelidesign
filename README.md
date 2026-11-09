@@ -23,6 +23,8 @@ npm run preview
 
 Alt kategoriler aynı dosyadaki `productSubcategories` eşlemesinde ürün kimliğine göre tanımlanır. Örneğin `'zeytin-tepsi': 'Zeytin Desenli'`. Menüdeki resimler ve adetler bu eşlemeden otomatik türetilir. Ana kategori, alt kategori ve arama birlikte filtrelenir. Mevcut alt kategori adları temsili olarak hazırlanmıştır.
 
+Ürün detayındaki malzeme, boyut, parça sayısı, renk ve uzun açıklamalar `src/productInformation.js` içinde ürün kimliğine göre düzenlenir. Bu sürümde tüm teknik bilgiler temsili olarak işaretlenmiştir. Gerçek ürün verileri işletme tarafından doğrulandıktan sonra güncellenmelidir.
+
 **Bu sürümdeki ürün adları ve SVG çizimleri temsili tasarım örnekleridir. Instagram içeriği doğrulanamadığından gerçek işletme kataloğu olarak kabul edilmemelidir.** Canlı yayın öncesi işletmenin onayladığı fotoğraf ve ürün bilgileriyle değiştirin; temsili görsel etiketlerini ancak bundan sonra kaldırın. Gıda teması, malzeme, stok, fiyat veya dayanıklılık iddiası eklenmemiştir.
 
 Renkler ve duyarlı düzen `src/style.css` içinde tanımlıdır. Google Fonts erişilemezse yerel fontlara geçilir. Instagram bağlantısı `src/products.js` içindedir. Telefon veya adres doğrulanmadığı için eklenmemiştir. Analitik, çerez veya form verisi toplanmaz.
