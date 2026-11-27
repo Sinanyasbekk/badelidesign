@@ -6,6 +6,7 @@ export const categories = ['Tümü', 'Çok Satanlar', 'Tepsiler', 'Sehpalar', 'S
 // Şimdilik temsili seçki. İşletmenin onayladığı çok satan ürün kimlikleriyle güncelleyin.
 export const bestSellerIds = ['zeytin-tepsi', 'bahar-sehpa', 'limon-sunumluk', 'mavi-caydanlik'];
 export const products = [
+  { id: 'altin-cicekli-tek-kisilik-tepsi', name: 'Altın Çiçekli Tepsi ve Lokumluk', category: 'Tepsiler', subtitle: 'Altın tonları, zarif çiçekler ve uyumlu lokumluk', image: '/images/altin-cicekli-tek-kisilik-tepsi.png', images: ['/images/altin-cicekli-tepsi-4264.jpg', '/images/altin-cicekli-tepsi-4266.jpg'], imageCaptions: ['Ürün görseli', 'Tepsi ve lokumluğun gerçek ürün fotoğrafı', 'Fincanla kullanım örneği'], imageFit: 'contain', description: 'Altın tonlu zemini, kıvrımlı kabartma kenarları ve merkezindeki krem-sarı çiçek buketiyle tek kişilik tepsi takımı. Aynı çiçek desenine sahip lokumluk tasarımı tamamlar. Galeride takımın gerçek fotoğraflarını ve fincanla kullanım örneğini inceleyebilirsiniz.', demo: false },
   ...roseTrayProducts,
   { id: 'pembe-hibiskus-oval-tepsi', name: 'Pembe Hibiskuslu Oval Tepsi', category: 'Tepsiler', subtitle: 'Pembe hibiskus ve altın tonlu kenar süslemeleri', image: '/images/pembe-hibiskus-oval-tepsi.png', images: ['/images/pembe-hibiskus-oval-tepsi-0806.jpg', '/images/pembe-hibiskus-oval-tepsi-0808.jpg'], imageCaptions: ['Ürün görseli', 'Yakın çekim ürün fotoğrafı', 'Oval tepsi koleksiyonundan genel görünüm'], imageFit: 'contain', description: 'Beyaz zemin üzerindeki pembe hibiskus, pastel pembe bordür ve altın tonlu süslemelerle tamamlanır. Oval formdaki bu tasarımın ölçü ve uygulama detayları için bizimle iletişime geçebilirsiniz.', demo: false },
   { id: 'kirmizi-hibiskus-oval-tepsi', name: 'Kırmızı Hibiskuslu Porselen Oval Tepsi', category: 'Tepsiler', subtitle: 'Kırmızı hibiskus, beyaz zemin ve altın tonlu detaylar', image: '/images/kirmizi-hibiskus-oval-tepsi.png', imageFit: 'contain', description: 'Beyaz porselen zemin üzerindeki kırmızı hibiskus, kırmızı bordür ve altın tonlu kabartmalı kenarlarla bir araya gelir. Ölçü ve kişiselleştirme seçenekleri için Instagram üzerinden bize ulaşabilirsiniz.', demo: false },
@@ -22,6 +23,7 @@ export const products = [
 ];
 // Tepsiler kişi sayısına göre ayrılır; diğer kategoriler desenlere göre gruplanır.
 export const productSubcategories = {
+  'altin-cicekli-tek-kisilik-tepsi': 'Tek Kişilik Tepsiler',
   ...Object.fromEntries(roseTrayProducts.map(product => [product.id, 'Tek Kişilik Tepsiler'])),
   'pembe-hibiskus-oval-tepsi': 'Tek Kişilik Tepsiler',
   'kirmizi-hibiskus-oval-tepsi': 'Tek Kişilik Tepsiler',
@@ -52,4 +54,5 @@ export function getSubcategories(category) {
   }
   return [...groups.values()];
 }
+
 

@@ -2,6 +2,13 @@
 // İşletmenin doğruladığı bilgilerle ürün kimliği üzerinden güncelleyin.
 import { roseTrayInformation } from './roseTrayProducts.js';
 export const productInformation = {
+  'altin-cicekli-tek-kisilik-tepsi': {
+    demo: false, pattern: 'Krem ve Sarı Çiçek Buketi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '2 parça: 1 tepsi + 1 lokumluk', color: 'Altın / krem / sarı / koyu kahve tonları',
+    title: 'Altın Çiçekli Tek Kişilik Tepsi Takımı',
+    story: 'Altın tonlu tepsinin merkezinde koyu zemin üzerinde krem ve sarı çiçekler bulunur. Buketi çevreleyen ince çizim motifleri ve kıvrımlı kabartma kenarlar, çiçek desenli lokumlukla uyum oluşturur.',
+    detail: 'Takım içeriği: 1 tepsi ve 1 uyumlu lokumluk. Galerideki fincanlı fotoğraf kullanım örneğidir; takım içeriği hakkında bilgi almak için bize ulaşabilirsiniz. Ölçü, malzeme ve kişiselleştirme seçenekleri için Instagram üzerinden bilgi alabilirsiniz.',
+    care: 'Tepsi ve lokumluğa uygun temizlik ve kullanım bilgilerini Instagram üzerinden öğrenebilirsiniz.',
+  },
   ...roseTrayInformation,
   'pembe-hibiskus-oval-tepsi': {
     demo: false, pattern: 'Pembe Hibiskus', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '1 oval tepsi', color: 'Pembe / beyaz / altın tonları',
@@ -84,3 +91,4 @@ export const productInformation = {
     detail: 'Örnek ölçüler 25 cm yükseklik ve 14 cm çap olarak yazılmıştır. Motif, vazonun gövdesi boyunca dikey olarak ilerler. Gerçek ürünün su tutma özelliği, malzemesi ve kullanım amacı işletme tarafından doğrulanmalıdır.',
   },
 };
+
