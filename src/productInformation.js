@@ -2,6 +2,13 @@
 // İşletmenin doğruladığı bilgilerle ürün kimliği üzerinden güncelleyin.
 import { roseTrayInformation } from './roseTrayProducts.js';
 export const productInformation = {
+  'nakis-desenli-tek-kisilik-tepsi': {
+    demo: false, pattern: 'Nakış İşleyen Kadınlar', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '2 parça: 1 tepsi + 1 lokumluk', color: 'Krem / altın / pembe / bordo / yeşil-mavi tonları',
+    title: 'Nakış Desenli Tek Kişilik Tepsi ve Lokumluk Takımı',
+    story: 'Tepsinin merkezindeki klasik sahnede pembe ve yeşil-mavi kıyafetli iki kadın nakış işlerken betimlenir. Sahneyi çevreleyen kuş motifleri ve kıvrımlı süslemeler, altın tonlu kabartmalı kenarlarla bütünleşir. Lokumlukta da aynı figürlü desen kullanılır.',
+    detail: 'Takım, tek kişilik tepsi ve uyumlu lokumluktan oluşur. Galerideki toplu fotoğraf aynı modelin birden fazla takımını gösterir. Kesin ölçü, malzeme ve kişiselleştirme seçenekleri için Instagram üzerinden bilgi alabilirsiniz.',
+    care: 'Tepsi ve lokumluğa uygun temizlik ve bakım bilgilerini Instagram üzerinden öğrenebilirsiniz.',
+  },
   'barok-cicekli-tek-kisilik-tepsi': {
     demo: false, pattern: 'Sarı ve Beyaz Çiçek Buketi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '1 tepsi', color: 'Krem / altın / sarı / beyaz / koyu yeşil tonları',
     title: 'Tek Kişilik Altın Çerçeveli Barok Çiçekli Tepsi',
