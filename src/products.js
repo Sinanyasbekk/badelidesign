@@ -6,6 +6,7 @@ export const categories = ['Tümü', 'Çok Satanlar', 'Tepsiler', 'Sehpalar', 'S
 // Şimdilik temsili seçki. İşletmenin onayladığı çok satan ürün kimlikleriyle güncelleyin.
 export const bestSellerIds = ['zeytin-tepsi', 'bahar-sehpa', 'limon-sunumluk', 'mavi-caydanlik'];
 export const products = [
+  { id: 'vintage-cicek-buketli-oval-tepsi', name: 'Vintage Çiçek Buketli Altın Oval Tepsi', category: 'Tepsiler', subtitle: 'Krem bordür, altın detaylar ve renkli çiçek buketi', image: '/images/vintage-cicek-buketli-oval-tepsi.png', images: ['/images/vintage-oval-tepsi-2256.jpg', '/images/vintage-oval-tepsi-2257.jpg'], imageCaptions: ['Ürün görseli', 'Oval tepsinin gerçek ürün fotoğrafı', 'Aynı modelin farklı boylarıyla koleksiyon görünümü'], imageFit: 'contain', description: 'Altın tonlu zemin, krem renkli eskitme görünümlü bordür ve kabartmalı kenarlar; merkezdeki pembe, şeftali ve mürdüm tonlarındaki çiçek buketiyle birleşir. Tek kişilik oval tepsinin gerçek fotoğraflarını galeride inceleyebilirsiniz.', demo: false },
   { id: 'altin-cicekli-tek-kisilik-tepsi', name: 'Altın Çiçekli Tepsi ve Lokumluk', category: 'Tepsiler', subtitle: 'Altın tonları, zarif çiçekler ve uyumlu lokumluk', image: '/images/altin-cicekli-tek-kisilik-tepsi.png', images: ['/images/altin-cicekli-tepsi-4264.jpg', '/images/altin-cicekli-tepsi-4266.jpg'], imageCaptions: ['Ürün görseli', 'Tepsi ve lokumluğun gerçek ürün fotoğrafı', 'Fincanla kullanım örneği'], imageFit: 'contain', description: 'Altın tonlu zemini, kıvrımlı kabartma kenarları ve merkezindeki krem-sarı çiçek buketiyle tek kişilik tepsi takımı. Aynı çiçek desenine sahip lokumluk tasarımı tamamlar. Galeride takımın gerçek fotoğraflarını ve fincanla kullanım örneğini inceleyebilirsiniz.', demo: false },
   ...roseTrayProducts,
   { id: 'pembe-hibiskus-oval-tepsi', name: 'Pembe Hibiskuslu Oval Tepsi', category: 'Tepsiler', subtitle: 'Pembe hibiskus ve altın tonlu kenar süslemeleri', image: '/images/pembe-hibiskus-oval-tepsi.png', images: ['/images/pembe-hibiskus-oval-tepsi-0806.jpg', '/images/pembe-hibiskus-oval-tepsi-0808.jpg'], imageCaptions: ['Ürün görseli', 'Yakın çekim ürün fotoğrafı', 'Oval tepsi koleksiyonundan genel görünüm'], imageFit: 'contain', description: 'Beyaz zemin üzerindeki pembe hibiskus, pastel pembe bordür ve altın tonlu süslemelerle tamamlanır. Oval formdaki bu tasarımın ölçü ve uygulama detayları için bizimle iletişime geçebilirsiniz.', demo: false },
@@ -23,6 +24,7 @@ export const products = [
 ];
 // Tepsiler kişi sayısına göre ayrılır; diğer kategoriler desenlere göre gruplanır.
 export const productSubcategories = {
+  'vintage-cicek-buketli-oval-tepsi': 'Tek Kişilik Tepsiler',
   'altin-cicekli-tek-kisilik-tepsi': 'Tek Kişilik Tepsiler',
   ...Object.fromEntries(roseTrayProducts.map(product => [product.id, 'Tek Kişilik Tepsiler'])),
   'pembe-hibiskus-oval-tepsi': 'Tek Kişilik Tepsiler',

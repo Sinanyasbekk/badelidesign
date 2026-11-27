@@ -2,6 +2,13 @@
 // İşletmenin doğruladığı bilgilerle ürün kimliği üzerinden güncelleyin.
 import { roseTrayInformation } from './roseTrayProducts.js';
 export const productInformation = {
+  'vintage-cicek-buketli-oval-tepsi': {
+    demo: false, pattern: 'Vintage Çiçek Buketi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '1 oval tepsi', color: 'Altın / krem / pembe / şeftali / mürdüm tonları',
+    title: 'Vintage Çiçek Buketli Tek Kişilik Oval Tepsi',
+    story: 'Krem renkli merkezdeki çiçek buketi, altın tonlu kıvrımlı motiflerle çevrelenir. Eskitme görünümlü krem bordür ve kabartmalı kenar süslemeleri tasarıma klasik bir ifade katar.',
+    detail: 'Galerideki toplu fotoğraf aynı modelin farklı boylarını gösterir. Bu ürün tek kişilik oval tepsi olarak listelenmiştir. Ölçü, malzeme, boy seçenekleri ve diğer detaylar için Instagram üzerinden bize ulaşabilirsiniz.',
+    care: 'Ürüne uygun temizlik ve bakım bilgilerini Instagram üzerinden öğrenebilirsiniz.',
+  },
   'altin-cicekli-tek-kisilik-tepsi': {
     demo: false, pattern: 'Krem ve Sarı Çiçek Buketi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '2 parça: 1 tepsi + 1 lokumluk', color: 'Altın / krem / sarı / koyu kahve tonları',
     title: 'Altın Çiçekli Tek Kişilik Tepsi Takımı',
