@@ -3,6 +3,13 @@
 import { roseTrayInformation } from './roseTrayProducts.js';
 import { coloredRoseInformation } from './coloredRoseProducts.js';
 export const productInformation = {
+  'rokoko-ayakli-lokumluklu-tepsi': {
+    demo: false, pattern: 'Renkli Çiçek Buketi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '2 parça: 1 oval tepsi + 1 ayaklı lokumluk', color: 'Krem / antik altın / pembe / bordo / mavi tonları',
+    title: 'Çiçek Buketli Tek Kişilik Tepsi ve Ayaklı Lokumluk Takımı',
+    story: 'Oval tepsinin merkezindeki renkli çiçek buketi, altın tonlu ince motiflerle çevrelenir. Eskitme görünümlü bordür ve kabartmalı kenarlar klasik tasarımı tamamlar. Krem ve altın tonlu ayaklı lokumluk, süslü kenarı ve merkezindeki küçük motifle takıma uyum sağlar.',
+    detail: 'Takım, tek kişilik oval tepsi ve uyumlu ayaklı lokumluktan oluşur. Galerideki gerçek fotoğraf koleksiyondaki diğer takımları da gösterir. Kesin ölçü, malzeme ve kişiselleştirme seçenekleri için Instagram üzerinden bilgi alabilirsiniz.',
+    care: 'Tepsi ve ayaklı lokumluğa uygun temizlik ve bakım bilgilerini Instagram üzerinden öğrenebilirsiniz.',
+  },
   ...coloredRoseInformation,
   'romantik-desenli-tek-kisilik-tepsi': {
     demo: false, pattern: 'Romantik Bahçe Sahnesi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '2 parça: 1 tepsi + 1 lokumluk', color: 'Krem / altın / pembe / mavi / yeşil tonları',

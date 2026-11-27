@@ -7,6 +7,7 @@ export const categories = ['Tümü', 'Çok Satanlar', 'Tepsiler', 'Sehpalar', 'S
 // Şimdilik temsili seçki. İşletmenin onayladığı çok satan ürün kimlikleriyle güncelleyin.
 export const bestSellerIds = ['zeytin-tepsi', 'bahar-sehpa', 'limon-sunumluk', 'mavi-caydanlik'];
 export const products = [
+  { id: 'rokoko-ayakli-lokumluklu-tepsi', name: 'Çiçek Buketli Tepsi ve Ayaklı Lokumluk', category: 'Tepsiler', subtitle: 'Antik altın tonları, renkli çiçekler ve ayaklı lokumluk', image: '/images/rokoko-ayakli-lokumluklu-tepsi.png', images: ['/images/rokoko-tepsi-0142.jpg'], imageCaptions: ['Ürün görseli', 'Tepsi ve ayaklı lokumluğun gerçek fotoğrafı — koleksiyon görünümü'], imageFit: 'contain', description: 'Krem zemin üzerindeki pembe, bordo ve mavi çiçek buketi; altın tonlu desenli bir çerçeve ve eskitme görünümlü kenarlarla tamamlanır. Uyumlu ayaklı lokumluk, tek kişilik oval tepsiye eşlik eder.', demo: false },
   ...coloredRoseProducts,
   { id: 'romantik-desenli-tek-kisilik-tepsi', name: 'Romantik Desenli Tepsi ve Lokumluk', category: 'Tepsiler', subtitle: 'Klasik çift figürü, krem zemin ve altın tonlu kabartmalar', image: '/images/romantik-desenli-tek-kisilik-tepsi.png', images: ['/images/romantik-desenli-tepsi-0979.jpg', '/images/romantik-desenli-tepsi-0980.jpg'], imageCaptions: ['Ürün görseli', 'Tepsi ve uyumlu lokumluğun gerçek fotoğrafı', 'Aynı modelin takımlarıyla genel görünüm'], imageFit: 'contain', description: 'Krem zemin üzerindeki romantik bahçe sahnesi, pembe ve mavi kıyafetli çift figürüyle öne çıkar. Altın tonlu kıvrımlı kenarlar ve aynı desenli lokumluk, tek kişilik tepsiyi tamamlar. Gerçek ürün fotoğrafları galeride yer alır.', demo: false },
   { id: 'nakis-desenli-tek-kisilik-tepsi', name: 'Nakış Desenli Tepsi ve Lokumluk', category: 'Tepsiler', subtitle: 'Klasik figürlü desen, krem zemin ve altın tonlu süslemeler', image: '/images/nakis-desenli-tek-kisilik-tepsi.png', images: ['/images/nakis-desenli-tepsi-1153.jpg', '/images/nakis-desenli-tepsi-1155.jpg'], imageCaptions: ['Ürün görseli', 'Tepsi ve lokumluk takımlarının gerçek fotoğrafı', 'Figürlü desen ve altın tonlu kenar detayları'], imageFit: 'contain', description: 'Krem zemin üzerinde nakış işleyen iki kadın figürü, kuş motifleri ve altın tonlu kabartmalı çerçeve bir araya gelir. Aynı sahneyle süslenen uyumlu lokumluk, tek kişilik tepsiyi tamamlar. Gerçek ürün fotoğraflarını galeride inceleyebilirsiniz.', demo: false },
@@ -30,6 +31,7 @@ export const products = [
 ];
 // Tepsiler kişi sayısına göre ayrılır; diğer kategoriler desenlere göre gruplanır.
 export const productSubcategories = {
+  'rokoko-ayakli-lokumluklu-tepsi': 'Tek Kişilik Tepsiler',
   ...Object.fromEntries(coloredRoseProducts.map(product => [product.id, 'Tek Kişilik Tepsiler'])),
   'romantik-desenli-tek-kisilik-tepsi': 'Tek Kişilik Tepsiler',
   'nakis-desenli-tek-kisilik-tepsi': 'Tek Kişilik Tepsiler',
