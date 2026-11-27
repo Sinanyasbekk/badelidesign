@@ -2,6 +2,13 @@
 // İşletmenin doğruladığı bilgilerle ürün kimliği üzerinden güncelleyin.
 import { roseTrayInformation } from './roseTrayProducts.js';
 export const productInformation = {
+  'romantik-desenli-tek-kisilik-tepsi': {
+    demo: false, pattern: 'Romantik Bahçe Sahnesi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '2 parça: 1 tepsi + 1 lokumluk', color: 'Krem / altın / pembe / mavi / yeşil tonları',
+    title: 'Romantik Desenli Tek Kişilik Tepsi ve Lokumluk Takımı',
+    story: 'Bahçede oturan çift figürü, çiçekler ve yumuşak yeşil tonlarıyla çevrelenir. Krem zemin, altın tonlu kabartmalı kenarlar ve iki yandaki tutma boşlukları klasik tasarımı tamamlar. Uyumlu lokumlukta aynı romantik sahne kullanılır.',
+    detail: 'Takım, tek kişilik tepsi ve uyumlu lokumluktan oluşur. Galerideki toplu fotoğraf aynı modelin birden fazla takımını gösterir. Kesin ölçü, malzeme ve kişiselleştirme seçenekleri için Instagram üzerinden bilgi alabilirsiniz.',
+    care: 'Tepsi ve lokumluğa uygun temizlik ve kullanım bilgilerini Instagram üzerinden öğrenebilirsiniz.',
+  },
   'nakis-desenli-tek-kisilik-tepsi': {
     demo: false, pattern: 'Nakış İşleyen Kadınlar', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '2 parça: 1 tepsi + 1 lokumluk', color: 'Krem / altın / pembe / bordo / yeşil-mavi tonları',
     title: 'Nakış Desenli Tek Kişilik Tepsi ve Lokumluk Takımı',
