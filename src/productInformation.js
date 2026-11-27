@@ -3,7 +3,9 @@
 import { roseTrayInformation } from './roseTrayProducts.js';
 import { coloredRoseInformation } from './coloredRoseProducts.js';
 import { portraitTrayInformation } from './portraitTrayProducts.js';
+import { classicCoupleInformation } from './classicCoupleProducts.js';
 export const productInformation = {
+  ...classicCoupleInformation,
   ...portraitTrayInformation,
   'rokoko-ayakli-lokumluklu-tepsi': {
     demo: false, pattern: 'Renkli Çiçek Buketi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '2 parça: 1 oval tepsi + 1 ayaklı lokumluk', color: 'Krem / antik altın / pembe / bordo / mavi tonları',

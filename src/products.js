@@ -3,11 +3,13 @@
 import { roseTrayProducts } from './roseTrayProducts.js';
 import { coloredRoseProducts } from './coloredRoseProducts.js';
 import { portraitTrayProducts } from './portraitTrayProducts.js';
+import { classicCoupleProducts } from './classicCoupleProducts.js';
 export const instagramUrl = 'https://www.instagram.com/badelidesign/';
 export const categories = ['Tümü', 'Çok Satanlar', 'Tepsiler', 'Sehpalar', 'Sunumluklar', 'Çaydanlıklar', 'Dekoratif Objeler'];
 // Şimdilik temsili seçki. İşletmenin onayladığı çok satan ürün kimlikleriyle güncelleyin.
 export const bestSellerIds = ['zeytin-tepsi', 'bahar-sehpa', 'limon-sunumluk', 'mavi-caydanlik'];
 export const products = [
+  ...classicCoupleProducts,
   ...portraitTrayProducts,
   { id: 'rokoko-ayakli-lokumluklu-tepsi', name: 'Çiçek Buketli Tepsi ve Ayaklı Lokumluk', category: 'Tepsiler', subtitle: 'Antik altın tonları, renkli çiçekler ve ayaklı lokumluk', image: '/images/rokoko-ayakli-lokumluklu-tepsi.png', images: ['/images/rokoko-tepsi-0142.jpg'], imageCaptions: ['Ürün görseli', 'Tepsi ve ayaklı lokumluğun gerçek fotoğrafı — koleksiyon görünümü'], imageFit: 'contain', description: 'Krem zemin üzerindeki pembe, bordo ve mavi çiçek buketi; altın tonlu desenli bir çerçeve ve eskitme görünümlü kenarlarla tamamlanır. Uyumlu ayaklı lokumluk, tek kişilik oval tepsiye eşlik eder.', demo: false },
   ...coloredRoseProducts,
@@ -33,6 +35,7 @@ export const products = [
 ];
 // Tepsiler kişi sayısına göre ayrılır; diğer kategoriler desenlere göre gruplanır.
 export const productSubcategories = {
+  ...Object.fromEntries(classicCoupleProducts.map(product => [product.id, 'Tek Kişilik Tepsiler'])),
   ...Object.fromEntries(portraitTrayProducts.map(product => [product.id, 'Tek Kişilik Tepsiler'])),
   'rokoko-ayakli-lokumluklu-tepsi': 'Tek Kişilik Tepsiler',
   ...Object.fromEntries(coloredRoseProducts.map(product => [product.id, 'Tek Kişilik Tepsiler'])),
