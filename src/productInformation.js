@@ -2,6 +2,13 @@
 // İşletmenin doğruladığı bilgilerle ürün kimliği üzerinden güncelleyin.
 import { roseTrayInformation } from './roseTrayProducts.js';
 export const productInformation = {
+  'barok-cicekli-tek-kisilik-tepsi': {
+    demo: false, pattern: 'Sarı ve Beyaz Çiçek Buketi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '1 tepsi', color: 'Krem / altın / sarı / beyaz / koyu yeşil tonları',
+    title: 'Tek Kişilik Altın Çerçeveli Barok Çiçekli Tepsi',
+    story: 'Koyu yeşil tonlu merkezdeki sarı ve beyaz çiçek buketi, altın görünümlü desenli bir çerçeveyle çevrelenir. Krem zemin, kıvrımlı kabartmalar ve iki yandaki tutma boşlukları klasik tasarımı tamamlar.',
+    detail: 'Bu ürün tek kişilik tepsi modelidir; 4-6 kişilik versiyon ayrı bir ürün olarak listelenir. Galerideki toplu fotoğraflar koleksiyondaki farklı boyları da gösterir. Kesin ölçü, malzeme ve tasarım seçenekleri için Instagram üzerinden bilgi alabilirsiniz.',
+    care: 'Ürüne uygun temizlik ve kullanım bilgilerini Instagram üzerinden öğrenebilirsiniz.',
+  },
   'barok-cicekli-4-6-kisilik-tepsi': {
     demo: false, pattern: 'Sarı ve Beyaz Çiçek Buketi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '1 tepsi', color: 'Krem / altın / sarı / beyaz / koyu yeşil tonları',
     title: '4-6 Kişilik Altın Çerçeveli Barok Çiçekli Tepsi',
