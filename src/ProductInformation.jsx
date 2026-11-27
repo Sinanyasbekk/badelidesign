@@ -7,6 +7,7 @@ export default function ProductInformation({ product }) {
   if (!info) return null;
   const specs = [
     ['Marka', 'Badeli Design'], ['Desen', info.pattern || productSubcategories[product.id]],
+    ...(product.category === 'Tepsiler' ? [['Kişi Sayısı', productSubcategories[product.id] === 'Tek Kişilik Tepsiler' ? 'Tek kişilik' : '4–6 kişilik']] : []),
     ['Malzeme', info.material], ['Boyut', info.size], ['Parça Sayısı', info.pieces],
     ['Renk', info.color], ['Uygulama', 'El boyaması ve dekoratif çizim'],
   ];

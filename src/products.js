@@ -1,10 +1,12 @@
 // Tasarım örnekleri: gerçek ürünler ve fotoğraflar işletme onayıyla değiştirilmeli.
 // Fotoğrafları public/images/ klasörüne ekleyip image alanını güncelleyin.
+import { roseTrayProducts } from './roseTrayProducts.js';
 export const instagramUrl = 'https://www.instagram.com/badelidesign/';
 export const categories = ['Tümü', 'Çok Satanlar', 'Tepsiler', 'Sehpalar', 'Sunumluklar', 'Çaydanlıklar', 'Dekoratif Objeler'];
 // Şimdilik temsili seçki. İşletmenin onayladığı çok satan ürün kimlikleriyle güncelleyin.
 export const bestSellerIds = ['zeytin-tepsi', 'bahar-sehpa', 'limon-sunumluk', 'mavi-caydanlik'];
 export const products = [
+  ...roseTrayProducts,
   { id: 'pembe-hibiskus-oval-tepsi', name: 'Pembe Hibiskuslu Oval Tepsi', category: 'Tepsiler', subtitle: 'Pembe hibiskus ve altın tonlu kenar süslemeleri', image: '/images/pembe-hibiskus-oval-tepsi.png', images: ['/images/pembe-hibiskus-oval-tepsi-0806.jpg', '/images/pembe-hibiskus-oval-tepsi-0808.jpg'], imageCaptions: ['Ürün görseli', 'Yakın çekim ürün fotoğrafı', 'Oval tepsi koleksiyonundan genel görünüm'], imageFit: 'contain', description: 'Beyaz zemin üzerindeki pembe hibiskus, pastel pembe bordür ve altın tonlu süslemelerle tamamlanır. Oval formdaki bu tasarımın ölçü ve uygulama detayları için bizimle iletişime geçebilirsiniz.', demo: false },
   { id: 'kirmizi-hibiskus-oval-tepsi', name: 'Kırmızı Hibiskuslu Porselen Oval Tepsi', category: 'Tepsiler', subtitle: 'Kırmızı hibiskus, beyaz zemin ve altın tonlu detaylar', image: '/images/kirmizi-hibiskus-oval-tepsi.png', imageFit: 'contain', description: 'Beyaz porselen zemin üzerindeki kırmızı hibiskus, kırmızı bordür ve altın tonlu kabartmalı kenarlarla bir araya gelir. Ölçü ve kişiselleştirme seçenekleri için Instagram üzerinden bize ulaşabilirsiniz.', demo: false },
   { id: 'cay-tabakli-mavi-cicekli-oval-tepsi', name: 'Çay Tabaklı Mavi Çiçekli Oval Tepsi', category: 'Tepsiler', subtitle: 'Uyumlu çay tabağıyla tamamlanan mavi çiçekli tasarım', image: '/images/cay-tabakli-mavi-cicekli-oval-tepsi.png', imageFit: 'contain', description: 'Mavi çiçekli, altın tonlu işlemeli oval tepsi; aynı desen ve renklerdeki çay tabağıyla birlikte bir takım oluşturur. Beyaz zemin, açık mavi bordür ve altın tonlu kenarlar hem tepside hem çay tabağında devam eder.', demo: false },
@@ -18,19 +20,20 @@ export const products = [
   { id: 'kir-cicegi-tepsi', name: 'Kır Çiçeği', category: 'Tepsiler', subtitle: 'Yumuşak renkler, ince detaylar', image: '/images/flower-tray.svg', description: 'Kır çiçeklerinden ilham alan dekoratif tepsi örneği. Renk ve motif seçeneklerini konuşmak için bize yazın.', demo: true },
   { id: 'botanik-vazo', name: 'Botanik', category: 'Dekoratif Objeler', subtitle: 'Evinizin bir köşesinde doğanın izi', image: '/images/vase.svg', description: 'Bitkisel motiflerle yorumlanan dekoratif obje tasarımı. Güncel çalışmalarımızı Instagram hesabımızda keşfedebilirsiniz.', demo: true },
 ];
-// Temsili alt kategoriler; gerçek katalogla birlikte düzenlenebilir.
+// Tepsiler kişi sayısına göre ayrılır; diğer kategoriler desenlere göre gruplanır.
 export const productSubcategories = {
-  'pembe-hibiskus-oval-tepsi': 'Oval Tepsi',
-  'kirmizi-hibiskus-oval-tepsi': 'Oval Tepsi',
-  'cay-tabakli-mavi-cicekli-oval-tepsi': 'Oval Tepsi',
-  'sari-hibiskus-oval-tepsi': 'Oval Tepsi',
-  'lacivert-cicekli-oval-tepsi': 'Oval Tepsi',
-  'turuncu-cicekli-oval-tepsi': 'Oval Tepsi',
-  'zeytin-tepsi': 'Zeytin Desenli',
+  ...Object.fromEntries(roseTrayProducts.map(product => [product.id, 'Tek Kişilik Tepsiler'])),
+  'pembe-hibiskus-oval-tepsi': 'Tek Kişilik Tepsiler',
+  'kirmizi-hibiskus-oval-tepsi': 'Tek Kişilik Tepsiler',
+  'cay-tabakli-mavi-cicekli-oval-tepsi': 'Tek Kişilik Tepsiler',
+  'sari-hibiskus-oval-tepsi': 'Tek Kişilik Tepsiler',
+  'lacivert-cicekli-oval-tepsi': 'Tek Kişilik Tepsiler',
+  'turuncu-cicekli-oval-tepsi': 'Tek Kişilik Tepsiler',
+  'zeytin-tepsi': '4-6 Kişilik Tepsiler',
   'bahar-sehpa': 'Çiçek Desenli',
   'limon-sunumluk': 'Limon Desenli',
   'mavi-caydanlik': 'Mavi Botanik',
-  'kir-cicegi-tepsi': 'Çiçek Desenli',
+  'kir-cicegi-tepsi': '4-6 Kişilik Tepsiler',
   'botanik-vazo': 'Botanik Desenli',
 };
 export function filterProducts(category, query = '', subcategory = '') {
@@ -49,3 +52,4 @@ export function getSubcategories(category) {
   }
   return [...groups.values()];
 }
+

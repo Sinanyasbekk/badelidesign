@@ -11,15 +11,15 @@ test('Her ürün benzersiz kimlik, geçerli kategori ve yerel görsel içerir', 
 });
 test('Alt kategoriler yalnızca ana kategorideki ürünleri sayar ve aramayla birleşir', () => {
   const groups = getSubcategories('Tepsiler');
-  assert.deepEqual(groups.map(group => group.name), ['Oval Tepsi', 'Zeytin Desenli', 'Çiçek Desenli']);
-  assert.equal(groups.reduce((sum, group) => sum + group.count, 0), 8);
-  assert.equal(filterProducts('Tepsiler', '', 'Oval Tepsi').length, 6);
-  assert.equal(filterProducts('Tepsiler', '', 'Çiçek Desenli')[0].id, 'kir-cicegi-tepsi');
-  assert.equal(filterProducts('Tepsiler', 'zeytin', 'Çiçek Desenli').length, 0);
-  assert.equal(filterProducts('Çok Satanlar', '', 'Çiçek Desenli')[0].id, 'bahar-sehpa');
+  assert.deepEqual(groups.map(group => group.name), ['Tek Kişilik Tepsiler', '4-6 Kişilik Tepsiler']);
+  assert.equal(groups.reduce((sum, group) => sum + group.count, 0), 14);
+  assert.equal(filterProducts('Tepsiler', '', 'Tek Kişilik Tepsiler').length, 12);
+  assert.equal(filterProducts('Tepsiler', 'kır çiçeği', '4-6 Kişilik Tepsiler')[0].id, 'kir-cicegi-tepsi');
+  assert.equal(filterProducts('Tepsiler', 'zeytin', 'Tek Kişilik Tepsiler').length, 0);
+  assert.equal(filterProducts('Çok Satanlar', '', '4-6 Kişilik Tepsiler')[0].id, 'zeytin-tepsi');
 });
 test('Kategori ve arama birlikte uygulanır; Türkçe harfler desteklenir', () => {
-  assert.equal(filterProducts('Tepsiler').length, 8);
+  assert.equal(filterProducts('Tepsiler').length, 14);
   assert.equal(filterProducts('Tümü', '  KIR ÇİÇEĞİ ').length, 1);
   assert.equal(filterProducts('Sehpalar', 'Zeytin').length, 0);
   assert.equal(filterProducts('Tümü', 'bulunmayan').length, 0);

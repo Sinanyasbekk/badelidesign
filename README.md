@@ -21,7 +21,7 @@ npm run preview
 
 `src/products.js` içinde ürün adı, kategori, açıklama ve görsel yolu düzenlenir. Gerçek görselleri `public/images/` içine ekleyin. Örneğin `/images/zeytin-tepsi.webp`. Görsel açıklamaları ve temsili görsel etiketleri `src/main.jsx` içinde bulunur.
 
-Alt kategoriler aynı dosyadaki `productSubcategories` eşlemesinde ürün kimliğine göre tanımlanır. Örneğin `'zeytin-tepsi': 'Zeytin Desenli'`. Menüdeki resimler ve adetler bu eşlemeden otomatik türetilir. Ana kategori, alt kategori ve arama birlikte filtrelenir. Mevcut alt kategori adları temsili olarak hazırlanmıştır.
+Alt kategoriler aynı dosyadaki `productSubcategories` eşlemesinde ürün kimliğine göre tanımlanır. Örneğin `'zeytin-tepsi': 'Zeytin Desenli'`. Menüdeki resimler ve adetler bu eşlemeden otomatik türetilir. Ana kategori, alt kategori ve arama birlikte filtrelenir. Tepsiler yalnızca Tek Kişilik Tepsiler ve 4-6 Kişilik Tepsiler olarak ayrılır. Altı oval model ve altı yeni lokumluklu takım tek kişilik bölümündedir; iki temsili tepsi 4-6 kişilik bölümündedir. Gül buketli altı takım ve ürün bilgileri src/roseTrayProducts.js dosyasında tutulur; her takımın galerisinde ayrı ürün görseli ve ortak kaynak fotoğraf bulunur.
 
 Ürün detayındaki malzeme, boyut, parça sayısı, renk ve uzun açıklamalar `src/productInformation.js` içinde ürün kimliğine göre düzenlenir. Bu sürümde tüm teknik bilgiler temsili olarak işaretlenmiştir. Gerçek ürün verileri işletme tarafından doğrulandıktan sonra güncellenmelidir.
 
@@ -51,3 +51,4 @@ GitHub Actions her gönderimde test ve derlemeyi çalıştırır; `hostinger-pub
 Hostinger → ilgili web sitesi → Advanced → Git bölümünden bu depoyu bağlayın. **Branch: `codex/hostinger`**, **hedef: `public_html`** seçin. `main` dalını doğrudan yayınlamayın; bu hosting akışı React kaynaklarını derlemez. İlk Deploy işleminden sonra Auto-deployment açık olmalıdır. Hostinger bağlantısı, ilk yayın ve otomatik güncelleme ayrıca panelden doğrulanmalıdır.
 
 Workflow yalnızca yayın işine `contents: write` verir; GitHub'ın geçici `GITHUB_TOKEN` kimliğini kullanır. FTP parolası veya kişisel erişim anahtarı eklemek gerekmez. Yayın dalında elle değişiklik yapmayın; sonraki derleme bu dalın içeriğini günceller. Hosting üzerindeki değişiklikleri de kaynak projeye işleyin.
+

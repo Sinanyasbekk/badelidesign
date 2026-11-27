@@ -1,6 +1,8 @@
 // Malzeme, ölçü ve bakım dahil tüm teknik bilgiler tasarım amaçlı örnektir.
 // İşletmenin doğruladığı bilgilerle ürün kimliği üzerinden güncelleyin.
+import { roseTrayInformation } from './roseTrayProducts.js';
 export const productInformation = {
+  ...roseTrayInformation,
   'pembe-hibiskus-oval-tepsi': {
     demo: false, pattern: 'Pembe Hibiskus', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '1 oval tepsi', color: 'Pembe / beyaz / altın tonları',
     title: 'Altın Süslemeli Pembe Hibiskus Tepsisi',
@@ -44,6 +46,7 @@ export const productInformation = {
     care: 'Ürüne uygun temizlik ve bakım bilgilerini Instagram üzerinden öğrenebilirsiniz.',
   },
   'zeytin-tepsi': {
+    pattern: 'Zeytin Dalı',
     material: 'Ahşap', size: '40 × 30 cm', pieces: '1 parça', color: 'Krem / zeytin yeşili',
     title: 'Zeytin Dalı Dekoratif Tepsi',
     story: 'Zeytin dallarının sade çizgileri, krem zemin üzerinde doğadan ilham alan bir görünüm oluşturur. Yaşam alanlarında küçük objalarla birlikte sergilenebilecek dekoratif bir tasarım örneğidir.',
@@ -68,6 +71,7 @@ export const productInformation = {
     detail: 'Örnek tasarım için 24 cm toplam yükseklik düşünülmüştür. Malzeme ve parça sayısı yerleşimi göstermek amacıyla yazılmıştır. Gerçek ürünün kapasitesi, ısıya uygunluğu ve kullanım koşulları işletme tarafından ayrıca belirtilmelidir.',
   },
   'kir-cicegi-tepsi': {
+    pattern: 'Kır Çiçeği',
     material: 'Ahşap', size: '38 × 28 cm', pieces: '1 parça', color: 'Krem / pastel pembe',
     title: 'Kır Çiçeği El Boyaması Tepsi',
     story: 'Kır çiçeklerinin doğal görünümünü pastel renklerle yorumlayan bir tepsi tasarımıdır. İnce fırça izleri ve dağınık çiçek yerleşimi, sade bir köşeye yumuşak bir hareket katar.',
