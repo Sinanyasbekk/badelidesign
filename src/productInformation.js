@@ -2,6 +2,13 @@
 // İşletmenin doğruladığı bilgilerle ürün kimliği üzerinden güncelleyin.
 import { roseTrayInformation } from './roseTrayProducts.js';
 export const productInformation = {
+  'barok-cicekli-4-6-kisilik-tepsi': {
+    demo: false, pattern: 'Sarı ve Beyaz Çiçek Buketi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '1 tepsi', color: 'Krem / altın / sarı / beyaz / koyu yeşil tonları',
+    title: '4-6 Kişilik Altın Çerçeveli Barok Çiçekli Tepsi',
+    story: 'Krem renkli zeminin merkezinde sarı ve beyaz çiçeklerden oluşan bir buket bulunur. Koyu yeşil tonlu arka planı çevreleyen altın görünümlü motifler, kabartmalı barok kenarlarla bir bütün oluşturur.',
+    detail: 'Bu model 4-6 kişilik tepsi kategorisindedir. Galerideki toplu fotoğraflar aynı modelin koleksiyon görünümünü gösterir; ürün tek tepsi olarak listelenmiştir. Kesin ölçü, malzeme ve tasarım seçenekleri için Instagram üzerinden bilgi alabilirsiniz.',
+    care: 'Ürüne uygun temizlik ve kullanım bilgilerini Instagram üzerinden öğrenebilirsiniz.',
+  },
   'vintage-cicek-buketli-oval-tepsi': {
     demo: false, pattern: 'Vintage Çiçek Buketi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '1 oval tepsi', color: 'Altın / krem / pembe / şeftali / mürdüm tonları',
     title: 'Vintage Çiçek Buketli Tek Kişilik Oval Tepsi',
