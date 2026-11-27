@@ -1,11 +1,13 @@
 // Tasarım örnekleri: gerçek ürünler ve fotoğraflar işletme onayıyla değiştirilmeli.
 // Fotoğrafları public/images/ klasörüne ekleyip image alanını güncelleyin.
 import { roseTrayProducts } from './roseTrayProducts.js';
+import { coloredRoseProducts } from './coloredRoseProducts.js';
 export const instagramUrl = 'https://www.instagram.com/badelidesign/';
 export const categories = ['Tümü', 'Çok Satanlar', 'Tepsiler', 'Sehpalar', 'Sunumluklar', 'Çaydanlıklar', 'Dekoratif Objeler'];
 // Şimdilik temsili seçki. İşletmenin onayladığı çok satan ürün kimlikleriyle güncelleyin.
 export const bestSellerIds = ['zeytin-tepsi', 'bahar-sehpa', 'limon-sunumluk', 'mavi-caydanlik'];
 export const products = [
+  ...coloredRoseProducts,
   { id: 'romantik-desenli-tek-kisilik-tepsi', name: 'Romantik Desenli Tepsi ve Lokumluk', category: 'Tepsiler', subtitle: 'Klasik çift figürü, krem zemin ve altın tonlu kabartmalar', image: '/images/romantik-desenli-tek-kisilik-tepsi.png', images: ['/images/romantik-desenli-tepsi-0979.jpg', '/images/romantik-desenli-tepsi-0980.jpg'], imageCaptions: ['Ürün görseli', 'Tepsi ve uyumlu lokumluğun gerçek fotoğrafı', 'Aynı modelin takımlarıyla genel görünüm'], imageFit: 'contain', description: 'Krem zemin üzerindeki romantik bahçe sahnesi, pembe ve mavi kıyafetli çift figürüyle öne çıkar. Altın tonlu kıvrımlı kenarlar ve aynı desenli lokumluk, tek kişilik tepsiyi tamamlar. Gerçek ürün fotoğrafları galeride yer alır.', demo: false },
   { id: 'nakis-desenli-tek-kisilik-tepsi', name: 'Nakış Desenli Tepsi ve Lokumluk', category: 'Tepsiler', subtitle: 'Klasik figürlü desen, krem zemin ve altın tonlu süslemeler', image: '/images/nakis-desenli-tek-kisilik-tepsi.png', images: ['/images/nakis-desenli-tepsi-1153.jpg', '/images/nakis-desenli-tepsi-1155.jpg'], imageCaptions: ['Ürün görseli', 'Tepsi ve lokumluk takımlarının gerçek fotoğrafı', 'Figürlü desen ve altın tonlu kenar detayları'], imageFit: 'contain', description: 'Krem zemin üzerinde nakış işleyen iki kadın figürü, kuş motifleri ve altın tonlu kabartmalı çerçeve bir araya gelir. Aynı sahneyle süslenen uyumlu lokumluk, tek kişilik tepsiyi tamamlar. Gerçek ürün fotoğraflarını galeride inceleyebilirsiniz.', demo: false },
   { id: 'barok-cicekli-tek-kisilik-tepsi', name: 'Tek Kişilik Barok Çiçekli Tepsi', category: 'Tepsiler', subtitle: 'Krem zemin, sarı-beyaz çiçekler ve altın tonlu çerçeve', image: '/images/barok-cicekli-tek-kisilik-tepsi.png', images: ['/images/barok-cicekli-tepsi-4261.jpg', '/images/barok-cicekli-tepsi-4263.jpg'], imageCaptions: ['Tek kişilik ürün görseli', 'Tek kişilik modelin gerçek fotoğrafı — koleksiyon görünümü', 'Aynı desenin farklı boylarıyla genel görünüm'], imageFit: 'contain', description: 'Sarı ve beyaz çiçek buketini çevreleyen altın görünümlü motifler, krem zemin ve kabartmalı barok kenarlarla tamamlanır. Bu model tek kişilik tepsi olarak sunulur; galerideki toplu fotoğraflarda aynı desenin farklı boylarını da görebilirsiniz.', demo: false },
@@ -28,6 +30,7 @@ export const products = [
 ];
 // Tepsiler kişi sayısına göre ayrılır; diğer kategoriler desenlere göre gruplanır.
 export const productSubcategories = {
+  ...Object.fromEntries(coloredRoseProducts.map(product => [product.id, 'Tek Kişilik Tepsiler'])),
   'romantik-desenli-tek-kisilik-tepsi': 'Tek Kişilik Tepsiler',
   'nakis-desenli-tek-kisilik-tepsi': 'Tek Kişilik Tepsiler',
   'barok-cicekli-tek-kisilik-tepsi': 'Tek Kişilik Tepsiler',

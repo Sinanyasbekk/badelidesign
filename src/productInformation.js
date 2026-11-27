@@ -1,7 +1,9 @@
 // Malzeme, ölçü ve bakım dahil tüm teknik bilgiler tasarım amaçlı örnektir.
 // İşletmenin doğruladığı bilgilerle ürün kimliği üzerinden güncelleyin.
 import { roseTrayInformation } from './roseTrayProducts.js';
+import { coloredRoseInformation } from './coloredRoseProducts.js';
 export const productInformation = {
+  ...coloredRoseInformation,
   'romantik-desenli-tek-kisilik-tepsi': {
     demo: false, pattern: 'Romantik Bahçe Sahnesi', material: 'Bilgi için iletişime geçin', size: 'Bilgi için iletişime geçin', pieces: '2 parça: 1 tepsi + 1 lokumluk', color: 'Krem / altın / pembe / mavi / yeşil tonları',
     title: 'Romantik Desenli Tek Kişilik Tepsi ve Lokumluk Takımı',
